@@ -6,7 +6,6 @@ from mcp import Client, StdioServerParameters
 
 
 async def main():
-    # Locate server.py relative to this file.
     server_path = Path(__file__).with_name("mcp_server.py")
 
     # Tell the MCP client how to launch the server.
