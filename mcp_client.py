@@ -1,5 +1,6 @@
 import asyncio
 from pathlib import Path
+import sys
 
 from mcp import Client, StdioServerParameters
 
@@ -10,7 +11,7 @@ async def main():
 
     # Tell the MCP client how to launch the server.
     server = StdioServerParameters(
-        command=str(Path(".venv-1/bin/python").resolve()),
+        command=sys.executable,
         args=[str(server_path)],
     )
 
